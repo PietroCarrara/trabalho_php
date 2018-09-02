@@ -15,10 +15,10 @@ if ($user) {
 	// Acertou a senha
 	if (password_verify($pass, $user->password)) {
 		$_SESSION['user'] = $user;
-		header('Location: /user/index.php');
+		header('Location: /index.php');
 	} else {
 		$_SESSION['msg'] .= 'Errou a senha!<br>';
-		header('Location: index.php');
+		header('Location: /login.php');
 	}
 } else {
 	$_SESSION['msg'] .= 'Conta não existe com esse email!<br>';
